@@ -2,7 +2,9 @@ import React from "react";
 import home1 from '../img/home1.png';
 //import styled pkg - we are using the styled components method of styling here which is very common
 //download vscode-styled-components extension along with pkg for txt highlighting
+//styled component - to add styling to pg, replace the tag tht u want to style with the const name of the style
 import styled from 'styled-components';
+import {StyledAbout, StyledDescription, StyledImage, StyledHide} from '../styles';
 
 const AboutSection = () => {
     return(
@@ -29,36 +31,7 @@ const AboutSection = () => {
                 <img src={home1} alt="guy with a camera"/>
             </StyledImage>
         </StyledAbout>
-    )
+    );
 }
-
-//styled component - to add styling to pg, replace the tag tht u want to style with the const name of the style
-const StyledAbout = styled.div`
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5rem 10rem;
-    color: white;
-`;
-const StyledDescription = styled.div`
-    flex: 1;
-    padding-right: 5rem;
-    h2{
-        font-weight: lighter;
-    }
-`;
-const StyledImage = styled.div`
-    flex: 1;
-    overflow: hidden;
-    img{
-        width: 100%;
-        height: 80vh;
-        object-fit: cover;
-    }
-`;
-const StyledHide = styled.div`
-    overflow: hidden;
-`;
 
 export default AboutSection;
