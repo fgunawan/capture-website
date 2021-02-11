@@ -20,7 +20,7 @@ const Nav = () => {
 }
 
 const StyledNav = styled.div`
-    min-height: 10vh;
+    min-height: 5vh;
     display: flex;
     margin: auto;
     justify-content: space-between;
@@ -41,7 +41,7 @@ const StyledNav = styled.div`
         font-weight: lighter;
     }
     li{
-        padding: 10rem;
+        padding: 3rem;
         position: relative;
     }
 `;

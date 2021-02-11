@@ -5,30 +5,34 @@ import home1 from '../img/home1.png';
 //styled component - to add styling to pg, replace the tag tht u want to style with the const name of the style
 import styled from 'styled-components';
 import {StyledAbout, StyledDescription, StyledImage, StyledHide} from '../styles';
+//framer motion - must replace tags u want to animate with the motion component and the tag and then u can add props
+import { motion } from "framer-motion";
+import {titleAnim, fade, photoAnim} from '../animation';
 
 const AboutSection = () => {
+
     return(
         <StyledAbout>
             <StyledDescription>
-                <div className="title">
+                <motion.div>
                     <StyledHide>
-                        <h2>We work to make</h2>
+                        <motion.h2 variants={titleAnim}>We work to make</motion.h2>
                     </StyledHide>
                     <StyledHide>
-                        <h2>your <span>dreams</span>
-                        </h2>
+                        <motion.h2 variants={titleAnim}>your <span>dreams</span>
+                        </motion.h2>
                     </StyledHide>
                     <StyledHide>
-                        <h2>come true.</h2>
+                        <motion.h2 variants={titleAnim}>come true.</motion.h2>
                     </StyledHide>
-                </div>
-                <p>Contact us for any photography or videography ideas that you have. 
+                </motion.div>
+                <motion.p variants={fade}>Contact us for any photography or videography ideas that you have. 
                     We have professionals with amazing skills.
-                </p>
-                <button>Contact Us</button>
+                </motion.p>
+                <motion.button variants={fade}>Contact Us</motion.button>
             </StyledDescription>
             <StyledImage>
-                <img src={home1} alt="guy with a camera"/>
+                <motion.img src={home1} alt="guy with a camera" variants={photoAnim}/>
             </StyledImage>
         </StyledAbout>
     );
