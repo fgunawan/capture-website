@@ -1,5 +1,6 @@
 import React from "react";
 import home1 from '../img/home1.png';
+import Wave from './Wave';
 //import styled pkg - we are using the styled components method of styling here which is very common
 //download vscode-styled-components extension along with pkg for txt highlighting
 //styled component - to add styling to pg, replace the tag tht u want to style with the const name of the style
@@ -34,6 +35,7 @@ const AboutSection = () => {
             <StyledImage>
                 <motion.img src={home1} alt="guy with a camera" variants={photoAnim}/>
             </StyledImage>
+            <Wave />
         </StyledAbout>
     );
 }
