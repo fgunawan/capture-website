@@ -55,6 +55,22 @@ const StyledNav = styled.div`
     padding: 3rem;
     position: relative;
   }
+  @media (max-width: 1300px) {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    #logo {
+      display: inline-block; //use this if a tag is not getting enough space, it's probs bc it's displayed inline (can't add padding top and bottom to inline elements)
+      margin: 2rem;
+    }
+    ul {
+      padding: 2rem;
+      justify-content: space-around;
+      width: 100%;
+    }
+    li {
+      padding: 0;
+    }
+  }
 `;
 
 export default Nav;
