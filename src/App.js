@@ -12,7 +12,6 @@ import MovieDetail from "./pages/MovieDetail";
 import { Switch, Route, useLocation } from "react-router-dom";
 //animation
 import { AnimatePresence } from "framer-motion";
-
 function App() {
   const location = useLocation();
 
